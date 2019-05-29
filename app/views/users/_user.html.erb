@@ -1,0 +1,19 @@
+
+
+<div class="profile-container">
+	<h1>User info</h1>
+	<%= attachment_image_tag user,:profile_image,:fill,100,100,format:'jpeg',fallback: "no_image.jpg",class:"img-circle pull-left profile-img" %>
+	<h3 class="profile-name">
+		Name
+		<%= user. name %>
+	</h3>
+	<h3>introduction
+		<%= user. introduction %>
+	</h3>
+	<% if user.id == current_user.id %>
+	<div class="row">
+		<p><%= link_to "" , edit_user_path(@user), class: "glyphicon glyphicon-wrench btn btn-default col-xs-12" %></p>
+	</div>
+	<% end %>
+</div>
+
