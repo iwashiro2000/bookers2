@@ -79,4 +79,5 @@ gem "refile" , require: "refile/rails" , github: 'manfe/refile'
 
 gem "refile-mini_magick"
 
-
+gem 'minitest', group: :test
+gem 'minitest-reporters', group: :test
